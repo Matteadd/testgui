@@ -13,8 +13,15 @@
         <list>
           <option value="N802" />
           <option value="N806" />
+          <option value="N803" />
         </list>
       </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnusedLocalInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignoreTupleUnpacking" value="true" />
+      <option name="ignoreLambdaParameters" value="true" />
+      <option name="ignoreLoopIterationVariables" value="true" />
+      <option name="ignoreVariablesStartingWithUnderscore" value="true" />
     </inspection_tool>
   </profile>
 </component>

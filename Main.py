@@ -1,3 +1,4 @@
+import threading
 import time
 
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
@@ -27,7 +28,7 @@ mpu = mpu6050(0x68) if mpu6050 is not None else ""
 import random
 
 
-class Gui():
+class Gui:
 
     def __init__(self, window):
 
@@ -214,12 +215,43 @@ class Gui():
         def setPlay(val):
             if val:
                 self.play = val
-                self.aggiornaGrafici(fig, fig3d, accGyroPlotsList, topLevel, grafico2d, grafico3d)
+                self.updateGrafici(topLevel, fig, fig3d, grafico2d, grafico3d)
+                # self.aggiornaGrafici(fig, fig3d, accGyroPlotsList, topLevel, grafico2d, grafico3d)
             else:
                 self.play = val
                 # stop = val
+                
+    def updateGrafici(self, topLevel, figure2d, figure3d, grafico2d, grafico3d):
 
-    def aggiornaGrafici(self, figure2d, figure3d, accGyroPlotsList, topLevel, grafico2d, grafico3d):
+        startTime = time.time()
+        axes2dAcc = figure2d.axes[0]
+        axes2dGyro = figure2d.axes[1]
+        axes3dAcc = figure3d.axes[0]
+
+        if self.play:
+            x = round(random.uniform(-1, 1), 1)
+            y = round(random.uniform(-1, 1), 1)
+            z = round(random.uniform(-1, 1), 1)
+
+            del self.dataY[0][0]
+            del self.dataY[1][0]
+            del self.dataY[2][0]
+
+            self.dataY[0].append(x)
+            self.dataY[1].append(y)
+            self.dataY[2].append(z)
+
+            threadUpdategrafico2d = threading.Thread(target=self.aggiornaGrafico2d, args=(axes2dAcc, axes2dGyro, grafico2d, self.dataX, self.dataY, self.dataX, self.dataY))
+            threadUpdategrafico3d = threading.Thread(target=self.aggiornaGrafico3d, args=(axes3dAcc, grafico3d, (x, y, z)))
+
+            threadUpdategrafico2d.start()
+            threadUpdategrafico3d.start()
+
+            topLevel.update()
+            topLevel.after(1, self.updateGrafici(topLevel, figure2d, figure3d, grafico2d, grafico3d))
+        
+    # vecchio metodo da 0.3 secondi di esecuzioni
+    def aggiornaGrafici(self, topLevel, figure2d, figure3d, grafico2d, grafico3d):
 
         startTime = time.time()
         axes2dAcc = figure2d.axes[0]
@@ -260,13 +292,7 @@ class Gui():
             axes3dAcc.set_ylim(-2, 2)
             axes3dAcc.set_zlim(-2, 2)
             axes3dAcc.plot([0, x], [0, 0], [0, 0], color="red", marker="o", markevery=[-1])
-            axes3dAcc.plot([0, 0], [0, y
-
-
-
-
-
-                                    ], [0, 0], color="blue", marker="o", markevery=[-1])
+            axes3dAcc.plot([0, 0], [0, y], [0, 0], color="blue", marker="o", markevery=[-1])
             axes3dAcc.plot([0, 0], [0, 0], [0, z], color="green", marker="o", markevery=[-1])
             grafico3d.draw()
 
@@ -274,7 +300,43 @@ class Gui():
             print(round(nowTime - startTime, 3), "seconds")
 
             topLevel.update()
-            topLevel.after(1, self.aggiornaGrafici(figure2d, figure3d, accGyroPlotsList, topLevel, grafico2d, grafico3d))
+            topLevel.after(1, self.aggiornaGrafici(figure2d, figure3d, topLevel, grafico2d, grafico3d))
+
+
+    @staticmethod
+    def aggiornaGrafico2d(axes2dAcc, axes2dGyro, grafico2d, accDataX, accDataY, gyroDataX, gyroDataY):
+
+            axes2dAcc.clear()
+            axes2dGyro.clear()
+
+            axes2dAcc.plot(accDataX, accDataY[0])
+            axes2dAcc.plot(accDataX, accDataY[1])
+            axes2dAcc.plot(accDataX, accDataY[2])
+            axes2dGyro.plot(gyroDataX, gyroDataY[0])
+            axes2dGyro.plot(gyroDataX, gyroDataY[1])
+            axes2dGyro.plot(gyroDataX, gyroDataY[2])
+
+            grafico2d.draw()
+
+
+    @staticmethod
+    def aggiornaGrafico3d(axes3dAcc, grafico3d, accValue):
+
+        x = accValue[0]
+        y = accValue[1]
+        z = accValue[2]
+
+        axes3dAcc.clear()
+        axes3dAcc.set_xticklabels([])
+        axes3dAcc.set_yticklabels([])
+        axes3dAcc.set_zticklabels([])
+        axes3dAcc.set_xlim(-2, 2)
+        axes3dAcc.set_ylim(-2, 2)
+        axes3dAcc.set_zlim(-2, 2)
+        axes3dAcc.plot([0, x], [0, 0], [0, 0], color="red", marker="o", markevery=[-1])
+        axes3dAcc.plot([0, 0], [0, y], [0, 0], color="blue", marker="o", markevery=[-1])
+        axes3dAcc.plot([0, 0], [0, 0], [0, z], color="green", marker="o", markevery=[-1])
+        grafico3d.draw()
 
 
 if __name__ == '__main__':
