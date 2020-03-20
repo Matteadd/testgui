@@ -2,79 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f04ea6d2-e75a-4f59-97d5-e1961f7a4767" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThreadGrafici.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/TestoHeader.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/alertGiallo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/alertRosso.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/alertVerde.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/boccolaGiallo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/boccolaRosso.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/boccolaVerde.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bottone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/grafico3D.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/grafico3D1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/guida.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/imgReport.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/searchIconColor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/semGiallo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/semRosso.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/semVerde.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/triangoloAlert.png" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="121" selection-start-line="121" selection-end-line="121" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-                <element signature="e#10920#12689#0" />
-                <element signature="e#12924#13435#0" />
-                <element signature="e#13525#14241#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThreadGrafici.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ChirurgiaGuidataOs/Home.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11900">
-              <caret line="768" column="12" selection-start-line="768" selection-start-column="12" selection-end-line="769" selection-end-column="54" />
-              <folding>
-                <element signature="e#33172#36828#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -91,50 +27,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_4.py" />
-        <option value="$PROJECT_DIR$/threadGrafici.py" />
-        <option value="$PROJECT_DIR$/ThreadGrafici.py" />
-        <option value="$PROJECT_DIR$/Main.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="-9" />
-    <option name="width" value="1949" />
-    <option name="height" value="1017" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="testgui" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testgui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testgui" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-            </path>
-            <path>
-              <item name="testgui" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectId" id="1ZMvtKJazmrTYCKQ0rUEi0tN2Po" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -145,7 +42,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ChirurgiaGuidataOs/Home.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -155,18 +52,6 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.Main">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -243,6 +128,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -256,218 +153,27 @@
       <workItem from="1584517941170" duration="14993000" />
       <workItem from="1584627412168" duration="8648000" />
       <workItem from="1584642583682" duration="9987000" />
+      <workItem from="1584661992282" duration="3026000" />
+      <workItem from="1584707142738" duration="607000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33628000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49757674" visible="true" weight="0.2553305" />
-      <window_info id="Structure" order="1" sideWeight="0.5024233" side_tool="true" visible="true" weight="0.2553305" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="File Transfer" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5146262" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32936078" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="right" id="Remote Host" visible="true" weight="0.32995737" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.32995737" />
-      <window_info anchor="right" id="JSON Viewer" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/testgui$scratch_3.coverage" NAME="scratch_3 Coverage Results" MODIFIED="1584520306847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
-    <SUITE FILE_PATH="coverage/testgui$scratch_4.coverage" NAME="scratch_4 Coverage Results" MODIFIED="1584531423177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
-    <SUITE FILE_PATH="coverage/testgui$Main.coverage" NAME="Main Coverage Results" MODIFIED="1584652695833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  <component name="WindowStateProjectService">
+    <state x="552" y="179" key="#Deployment" timestamp="1584662055409">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#Deployment/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1584662055409" />
+    <state x="830" y="414" key="publish.login" timestamp="1584662020280">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="830" y="414" key="publish.login/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1584662020280" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/matplotlib/backends/_backend_tk.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="328" column="24" lean-forward="true" selection-start-line="328" selection-start-column="24" selection-end-line="328" selection-end-column="24" />
-          <folding>
-            <element signature="e#4230#5700#0" />
-            <element signature="e#5724#6030#0" />
-            <element signature="e#6035#6141#1" />
-            <element signature="e#6218#8477#0" />
-            <element signature="e#7722#7782#0" />
-            <element signature="e#8095#8162#0" />
-            <element signature="e#8244#8359#0" />
-            <element signature="e#8293#8359#0" />
-            <element signature="e#8516#9608#0" />
-            <element signature="e#9173#9227#0" />
-            <element signature="e#9673#12210#0" />
-            <element signature="e#9673#9791#1" />
-            <element signature="e#9800#9860#0" />
-            <element signature="e#10377#10437#0" />
-            <element signature="e#11685#11753#0" />
-            <element signature="e#11782#11905#0" />
-            <element signature="e#11934#12210#0" />
-            <element signature="e#11934#11990#0" />
-            <element signature="e#12384#12471#0" />
-            <element signature="e#12578#12795#0" />
-            <element signature="e#12578#12765#1" />
-            <element signature="e#12847#13020#0" />
-            <element signature="e#13071#13248#0" />
-            <element signature="e#13315#13783#0" />
-            <element signature="e#13508#13673#0" />
-            <element signature="e#13837#13882#0" />
-            <element signature="e#13935#14374#0" />
-            <element signature="e#14129#14294#0" />
-            <element signature="e#14419#14646#0" />
-            <element signature="e#14699#15141#0" />
-            <element signature="e#14904#15141#0" />
-            <element signature="e#15182#16957#0" />
-            <element signature="e#15534#15599#0" />
-            <element signature="e#16148#16256#0" />
-            <element signature="e#16160#16256#0" />
-            <element signature="e#16308#16463#0" />
-            <element signature="e#16320#16463#0" />
-            <element signature="e#16490#16645#0" />
-            <element signature="e#16502#16645#0" />
-            <element signature="e#16687#16937#0" />
-            <element signature="e#16825#16937#0" />
-            <element signature="e#16999#17093#0" />
-            <element signature="e#17137#17233#0" />
-            <element signature="e#17285#17362#0" />
-            <element signature="e#17400#17451#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/matplotlib/backends/backend_agg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="361" column="6" selection-start-line="361" selection-start-column="6" selection-end-line="361" selection-end-column="6" />
-          <folding>
-            <element signature="e#12813#13046#1" />
-            <element signature="e#13092#13167#0" />
-            <element signature="e#13235#13322#0" />
-            <element signature="e#13352#13697#0" />
-            <element signature="e#13352#13411#1" />
-            <element signature="e#13511#13697#0" />
-            <element signature="e#13555#13619#0" />
-            <element signature="e#13750#14155#0" />
-            <element signature="e#13988#14070#0" />
-            <element signature="e#14193#14488#0" />
-            <element signature="e#14193#14444#1" />
-            <element signature="e#14527#14824#0" />
-            <element signature="e#14527#14779#1" />
-            <element signature="e#14861#15179#0" />
-            <element signature="e#14861#15136#1" />
-            <element signature="e#15248#15498#0" />
-            <element signature="e#15327#15436#0" />
-            <element signature="e#15663#18878#0" />
-            <element signature="e#15663#17535#1" />
-            <element signature="e#17647#17782#0" />
-            <element signature="e#17831#18521#0" />
-            <element signature="e#17963#18027#0" />
-            <element signature="e#18153#18309#0" />
-            <element signature="e#18549#18878#0" />
-            <element signature="e#18636#18749#0" />
-            <element signature="e#18773#18878#0" />
-            <element signature="e#18919#19166#0" />
-            <element signature="e#19060#19166#0" />
-            <element signature="e#19068#19165#0" />
-            <element signature="e#19194#22217#0" />
-            <element signature="e#19194#19264#0" />
-            <element signature="e#19516#21646#0" />
-            <element signature="e#19516#20668#1" />
-            <element signature="e#20774#20837#0" />
-            <element signature="e#21321#21392#0" />
-            <element signature="e#21808#22185#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/matplotlib/backends/backend_tkagg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="34" lean-forward="true" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ChirurgiaGuidataOs/Home.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11900">
-          <caret line="768" column="12" selection-start-line="768" selection-start-column="12" selection-end-line="769" selection-end-column="54" />
-          <folding>
-            <element signature="e#33172#36828#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThreadGrafici.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-            <element signature="e#10920#12689#0" />
-            <element signature="e#12924#13435#0" />
-            <element signature="e#13525#14241#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/testgui$scratch_4.coverage" NAME="scratch_4 Coverage Results" MODIFIED="1584531423177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/testgui$scratch_3.coverage" NAME="scratch_3 Coverage Results" MODIFIED="1584520306847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/testgui$Main.coverage" NAME="Main Coverage Results" MODIFIED="1584652695833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

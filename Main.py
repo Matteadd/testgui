@@ -52,14 +52,14 @@ class Gui:
         grafico2d = FigureCanvasTkAgg(fig, topLevel)
 
         accAxes = fig.add_subplot(211)
-        # accAxes.set_xticklabels([])
-        # accAxes.set_xlim(50, 0)
-        # accAxes.set_ylim([-5, 5])
+        accAxes.set_xticklabels([])
+        accAxes.set_xlim(50, 0)
+        accAxes.set_ylim([-5, 5])
 
         gyroAxes = fig.add_subplot(212)
-        # gyroAxes.set_xticklabels([])
-        # gyroAxes.set_xlim(50, 0)
-        # gyroAxes.set_ylim([-300, 300])
+        gyroAxes.set_xticklabels([])
+        gyroAxes.set_xlim(50, 0)
+        gyroAxes.set_ylim([-300, 300])
 
         fig3d = Figure(facecolor="red", frameon=True, constrained_layout=False)
         fig3d.set_constrained_layout_pads(w_pad=0, h_pad=0, wspace=0, hspace=0)
@@ -68,9 +68,9 @@ class Gui:
         ax3d.set_xticklabels([])
         ax3d.set_yticklabels([])
         ax3d.set_zticklabels([])
-        ax3d.set_xlim(-2, 2)
-        ax3d.set_ylim(-2, 2)
-        ax3d.set_zlim(-2, 2)
+        ax3d.set_xlim(-10, 10)
+        ax3d.set_ylim(-10, 10)
+        ax3d.set_zlim(-10, 10)
         ax3d.plot([0, 0], [0, 0], [0, 0], color="green", marker="o", markevery=[-1])
 
         accPlots = []
@@ -115,7 +115,7 @@ class Gui:
         axes3dAcc = figure3d.axes[0]
 
         while self.play:
-            startTime = time.time()
+            # startTime = time.time()
 
             dataAccFromMpu = self.mpu.get_accel_data()
             dataGyroFromMpu = self.mpu.get_gyro_data()
@@ -140,20 +140,20 @@ class Gui:
             # threadUpdategrafico3d = threading.Thread(target=self.aggiornaGrafico3d, args=(axes3dAcc, grafico3d, (x, y, z)))
 
             threadUpdategrafico2d = ThGrafico2d(grafico2d, axes2dAcc, axes2dGyro, self.dataX, self.dataY, self.dataX, self.dataY)
-            threadUpdategrafico3d = ThGrafico3d(axes3dAcc, grafico3d, (x, y, z))
+            # threadUpdategrafico3d = ThGrafico3d(axes3dAcc, grafico3d, (x, y, z))
 
             threadUpdategrafico2d.start()
-            threadUpdategrafico3d.start()
+            # threadUpdategrafico3d.start()
 
             threadUpdategrafico2d.join()
-            threadUpdategrafico3d.join()
+            # threadUpdategrafico3d.join()
 
             grafico2d.draw()
-            grafico3d.draw()
+            # grafico3d.draw()
             topLevel.update()
 
-            nowTime = time.time()
-            print(round(nowTime - startTime, 3), "seconds")
+            # nowTime = time.time()
+            # print(round(nowTime - startTime, 3), "seconds")
             # topLevel.after(1, self.updateGrafici(topLevel, figure2d, figure3d, grafico2d, grafico3d))
 
     # vecchio metodo da 0.3 secondi di esecuzioni
