@@ -48,7 +48,7 @@ class Gui:
         accLegends = ['Acc_x', 'Acc_y', 'Acc_z']
         gyroLegends = ['Gyro_x', 'Gyro_y', 'Gyro_z']
 
-        fig = Figure(facecolor="red", frameon=False, constrained_layout=False)
+        fig = Figure(facecolor="red", frameon=False, constrained_layout=True)
         grafico2d = FigureCanvasTkAgg(fig, topLevel)
 
         accAxes = fig.add_subplot(211)
@@ -61,9 +61,10 @@ class Gui:
         gyroAxes.set_xlim(50, 0)
         gyroAxes.set_ylim([-300, 300])
 
-        fig3d = Figure(facecolor="red", frameon=True, constrained_layout=False)
+        fig3d = Figure(facecolor="red", frameon=True, constrained_layout=True)
         fig3d.set_constrained_layout_pads(w_pad=0, h_pad=0, wspace=0, hspace=0)
         grafico3d = FigureCanvasTkAgg(fig3d, topLevel)
+
         ax3d = fig3d.add_subplot(111, projection="3d", elev=45, azim=45)
         ax3d.set_xticklabels([])
         ax3d.set_yticklabels([])
@@ -84,8 +85,16 @@ class Gui:
         accAxes.legend(loc='upper right', fancybox=True, shadow=True)
         gyroAxes.legend(loc='upper right', fancybox=True, shadow=True)
 
-        grafico2d.get_tk_widget().place(relx=0.05, rely=0.0, relwidth=0.9, relheight=0.5)
-        grafico3d.get_tk_widget().place(relx=0.05, rely=0.5, relwidth=0.9, relheight=0.4)
+        widgetTkGrafico2d = grafico2d.get_tk_widget()
+        widgetTkGrafico3d = grafico3d.get_tk_widget()
+
+        print(type(grafico2d))
+        print(type(grafico3d))
+        print(type(widgetTkGrafico2d))
+        print(type(widgetTkGrafico3d))
+
+        widgetTkGrafico2d.place(relx=0.05, rely=0.0, relwidth=0.9, relheight=0.5)
+        widgetTkGrafico3d.place(relx=0.05, rely=0.5, relwidth=0.9, relheight=0.4)
 
         avviaButton = tk.Button(topLevel)
         avviaButton.config(text="Avvia Lettura", command=lambda: setPlay(True))
@@ -103,19 +112,19 @@ class Gui:
         def setPlay(val):
             if val:
                 self.play = val
-                self.updateGrafici(topLevel, fig, fig3d, grafico2d, grafico3d)
+                self.updateGrafici(topLevel, fig, fig3d, grafico2d, grafico3d, widgetTkGrafico2d, widgetTkGrafico3d)
                 # self.aggiornaGrafici(topLevel, fig, fig3d, grafico2d, grafico3d)
             else:
                 self.play = val
 
-    def updateGrafici(self, topLevel, figure2d, figure3d, grafico2d, grafico3d):
+    def updateGrafici(self, topLevel, figure2d, figure3d, grafico2d, grafico3d, widgetTkGrafico2d, widgetTkGrafico3d):
 
         axes2dAcc = figure2d.axes[0]
         axes2dGyro = figure2d.axes[1]
         axes3dAcc = figure3d.axes[0]
 
         while self.play:
-            # startTime = time.time()
+            startTime = time.time()
 
             dataAccFromMpu = self.mpu.get_accel_data()
             dataGyroFromMpu = self.mpu.get_gyro_data()
@@ -139,21 +148,25 @@ class Gui:
             # threadUpdategrafico2d = threading.Thread(target=self.aggiornaGrafico2d, args=(axes2dAcc, axes2dGyro, grafico2d, self.dataX, self.dataY, self.dataX, self.dataY))
             # threadUpdategrafico3d = threading.Thread(target=self.aggiornaGrafico3d, args=(axes3dAcc, grafico3d, (x, y, z)))
 
-            threadUpdategrafico2d = ThGrafico2d(grafico2d, axes2dAcc, axes2dGyro, self.dataX, self.dataY, self.dataX, self.dataY)
-            # threadUpdategrafico3d = ThGrafico3d(axes3dAcc, grafico3d, (x, y, z))
+            threadUpdategrafico2d = ThGrafico2d(grafico2d, axes2dAcc, axes2dGyro, self.dataX, self.dataY, self.dataX, self.dataY, topLevel)
+            threadUpdategrafico3d = ThGrafico3d(axes3dAcc, grafico3d, (x, y, z))
 
             threadUpdategrafico2d.start()
-            # threadUpdategrafico3d.start()
+            threadUpdategrafico3d.start()
 
             threadUpdategrafico2d.join()
-            # threadUpdategrafico3d.join()
+            threadUpdategrafico3d.join()
 
             grafico2d.draw()
-            # grafico3d.draw()
-            topLevel.update()
+            grafico3d.draw()
+            print(type(grafico2d))
+            print(type(grafico3d))
+            # widgetTkGrafico2d.update()
+            # widgetTkGrafico3d.update()
+            # topLevel.update()
 
-            # nowTime = time.time()
-            # print(round(nowTime - startTime, 3), "seconds")
+            nowTime = time.time()
+            print(round(nowTime - startTime, 3), "seconds")
             # topLevel.after(1, self.updateGrafici(topLevel, figure2d, figure3d, grafico2d, grafico3d))
 
     # vecchio metodo da 0.3 secondi di esecuzioni

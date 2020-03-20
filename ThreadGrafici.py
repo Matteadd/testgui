@@ -4,7 +4,7 @@ import traceback
 
 class ThGrafico2d(threading.Thread):
 
-    def __init__(self, grafico2d, axes2dAcc, axes2dGyro, accDataX, accDataY, gyroDataX, gyroDataY):
+    def __init__(self, grafico2d, axes2dAcc, axes2dGyro, accDataX, accDataY, gyroDataX, gyroDataY, topLevel):
         threading.Thread.__init__(self)
         self.grafico2d = grafico2d
         self.axes2dAcc = axes2dAcc
@@ -13,6 +13,7 @@ class ThGrafico2d(threading.Thread):
         self.accDataY = accDataY
         self.gyroDataX = gyroDataX
         self.gyroDataY = gyroDataY
+        self.topLevel = topLevel
 
     def run(self):
         self.axes2dAcc.clear()
@@ -26,6 +27,9 @@ class ThGrafico2d(threading.Thread):
         self.axes2dGyro.plot(self.gyroDataX, self.gyroDataY[0])
         self.axes2dGyro.plot(self.gyroDataX, self.gyroDataY[1])
         self.axes2dGyro.plot(self.gyroDataX, self.gyroDataY[2])
+
+        # self.grafico2d.draw()
+        # self.topLevel.update()
 
 
 class ThGrafico3d(threading.Thread):
