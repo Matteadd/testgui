@@ -97,7 +97,7 @@ class Gui:
         widgetTkGrafico2d = grafico2d.get_tk_widget()
         # widgetTkGrafico3d = grafico3d.get_tk_widget()
 
-        print("grafico2d: ", type(grafico2d), grafico2d)
+        print("canvasGrafico: ", type(grafico2d), grafico2d)
         print("widgetTkGrafico2d: ", type(widgetTkGrafico2d), widgetTkGrafico2d)
 
         widgetTkGrafico2d.place(relx=0.05, rely=0.0, relwidth=0.9, relheight=0.9)
@@ -120,9 +120,9 @@ class Gui:
         def setPlay(val):
             if val:
                 self.play = val
-                # self.updateGrafici(topLevel, fig, fig3d, grafico2d, grafico3d, widgetTkGrafico2d, widgetTkGrafico3d)
+                # self.updateGrafici(topLevel, fig, fig3d, canvasGrafico, grafico3d, widgetTkGrafico2d, widgetTkGrafico3d)
                 self.updateFigure(topLevel, fig, grafico2d, widgetTkGrafico2d,)
-                # self.aggiornaGrafici(topLevel, fig, fig3d, grafico2d, grafico3d)
+                # self.aggiornaGrafici(topLevel, fig, fig3d, canvasGrafico, grafico3d)
             else:
                 self.play = val
 
@@ -167,7 +167,7 @@ class Gui:
         axes2dGyro = figure2d.axes[1]
         axes3dAcc = figure3d.axes[0]
 
-        print("grafico2d: ", type(grafico2d), grafico2d)
+        print("canvasGrafico: ", type(grafico2d), grafico2d)
         print("grafico3d: ", type(grafico3d), grafico3d)
 
         while self.play:
@@ -192,7 +192,7 @@ class Gui:
             self.dataY[1].append(y)
             self.dataY[2].append(z)
 
-            # threadUpdategrafico2d = threading.Thread(target=self.aggiornaGrafico2d, args=(axes2dAcc, axes2dGyro, grafico2d, self.dataX, self.dataY, self.dataX, self.dataY))
+            # threadUpdategrafico2d = threading.Thread(target=self.aggiornaGrafico2d, args=(axes2dAcc, axes2dGyro, canvasGrafico, self.dataX, self.dataY, self.dataX, self.dataY))
             # threadUpdategrafico3d = threading.Thread(target=self.aggiornaGrafico3d, args=(axes3dAcc, grafico3d, (x, y, z)))
 
             threadUpdategrafico2d = ThGrafico2d(grafico2d, axes2dAcc, axes2dGyro, self.dataX, self.dataY, self.dataX, self.dataY, topLevel)
@@ -212,7 +212,7 @@ class Gui:
 
             nowTime = time.time()
             # print(round(nowTime - startTime, 3), "seconds")
-            # topLevel.after(1, self.updateGrafici(topLevel, figure2d, figure3d, grafico2d, grafico3d))
+            # topLevel.after(1, self.updateGrafici(topLevel, figure2d, figure3d, canvasGrafico, grafico3d))
 
 
 if __name__ == '__main__':

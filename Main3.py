@@ -25,12 +25,9 @@ except ImportError:
     mpu6050 = None
 
 
-
 import random
-from ThreadGrafici import ThAxesAcc2d, ThAxesGyro2d, ThAxesAcc3d
-import multiprocessing
-
-# from ProcessGrafici import PrAxesAcc2d, PrAxesGyro2d, PrAxesAcc3d
+# from ThreadGrafici import ThAxesAcc2d, ThAxesGyro2d, ThAxesAcc3d
+from ThreadGrafici2 import ThAxesAcc2d, ThAxesGyro2d, ThAxesAcc3d
 
 
 class Gui:
@@ -52,7 +49,7 @@ class Gui:
         gyroLegends = ['Gyro_x', 'Gyro_y', 'Gyro_z']
 
         fig = Figure(facecolor="red", frameon=False, constrained_layout=True)
-        grafico2d = FigureCanvasTkAgg(fig, topLevel)
+        canvasGrafico = FigureCanvasTkAgg(fig, topLevel)
 
         accAxes = fig.add_subplot(311)
         accAxes.set_xticklabels([])
@@ -64,32 +61,26 @@ class Gui:
         gyroAxes.set_xlim(50, 0)
         gyroAxes.set_ylim([-300, 300])
 
-        ax3d = fig.add_subplot(313, projection="3d", elev=45, azim=45)
-        ax3d.set_xticklabels([])
-        ax3d.set_yticklabels([])
-        ax3d.set_zticklabels([])
-        ax3d.set_xlim(-10, 10)
-        ax3d.set_ylim(-10, 10)
-        ax3d.set_zlim(-10, 10)
-        ax3d.plot([0, 0], [0, 0], [0, 0], color="green", marker="o", markevery=[-1])
-
-        accPlots = []
-        gyroPlots = []
+        accAxes3d = fig.add_subplot(313, projection="3d", elev=45, azim=45)
+        accAxes3d.set_xticklabels([])
+        accAxes3d.set_yticklabels([])
+        accAxes3d.set_zticklabels([])
+        accAxes3d.set_xlim(-10, 10)
+        accAxes3d.set_ylim(-10, 10)
+        accAxes3d.set_zlim(-10, 10)
+        accAxes3d.plot([0, 0], [0, 0], [0, 0], color="green", marker="o", markevery=[-1])
 
         accAxes.plot(self.dataX, self.dataY[2], label=accLegends[2])
         gyroAxes.plot(self.dataX, self.dataY[2], label=gyroLegends[2])
 
-        accGyroPlotsList = [accPlots, gyroPlots]
-
         accAxes.legend(loc='upper right', fancybox=True, shadow=True)
         gyroAxes.legend(loc='upper right', fancybox=True, shadow=True)
 
-        widgetTkGrafico2d = grafico2d.get_tk_widget()
+        widgetTkFigure = canvasGrafico.get_tk_widget()
+        widgetTkFigure.place(relx=0.05, rely=0.0, relwidth=0.9, relheight=0.9)
 
-        print("canvasGrafico: ", type(grafico2d), grafico2d)
-        print("widgetTkGrafico2d: ", type(widgetTkGrafico2d), widgetTkGrafico2d)
-
-        widgetTkGrafico2d.place(relx=0.05, rely=0.0, relwidth=0.9, relheight=0.9)
+        print("canvasGrafico: ", type(canvasGrafico), canvasGrafico)
+        print("widgetTkFigure: ", type(widgetTkFigure), widgetTkFigure)
 
         avviaButton = tk.Button(topLevel)
         avviaButton.config(text="Avvia Lettura", command=lambda: setPlay(True))
@@ -100,22 +91,33 @@ class Gui:
         stopButton.place(relx=0.26, rely=0.9, relwidth=0.2, relheight=0.1, bordermode='ignore')
 
         def disabilitaRotazione(event):
-            ax3d.view_init(elev=45, azim=45)
-
+            accAxes3d.view_init(elev=45, azim=45)
         fig.canvas.mpl_connect('motion_notify_event', disabilitaRotazione)
 
         def setPlay(val):
             if val:
                 self.play = val
-                self.updateFigure(topLevel, fig, grafico2d, widgetTkGrafico2d,)
+                # self.updateFigure(topLevel, fig, canvasGrafico, widgetTkFigure,)
+                thUpdateAxesAcc3d = ThAxesAcc3d(accAxes3d, canvasGrafico, widgetTkFigure, [self.play])
+                print("canvasGraficoid", id(canvasGrafico))
+                print("widgetTkFigureid", id(widgetTkFigure))
+
+                # thUpdateAxesGyro2d = ThAxesGyro2d(accAxes3d, canvasGrafico, widgetTkFigure)
+                # thUpdateAxesAcc2d = ThAxesAcc2d(accAxes3d, canvasGrafico, widgetTkFigure)
+                thUpdateAxesAcc3d.start()
+                # thUpdateAxesGyro2d.start()
+                # thUpdateAxesAcc2d.start()
+                # thUpdateAxesAcc3d.join()
+                # thUpdateAxesGyro2d.join()
+                # thUpdateAxesAcc2d.join()
+
             else:
                 self.play = val
 
-    def updateFigure(self, topLevel, figure2d, grafico2d, widgetTkGrafico2d):
+    def updateFigure(self, topLevel, figure2d, canvasGrafico, widgetTkGrafico2d):
         axes2dAcc = figure2d.axes[0]
         axes2dGyro = figure2d.axes[1]
         axes3dAcc = figure2d.axes[2]
-        print(figure2d.axes)
 
         while self.play:
             startTime = time.time()
@@ -138,36 +140,19 @@ class Gui:
             self.dataY[1].append(y)
             self.dataY[2].append(z)
 
-            # threadUpdategrafico2d3d = ThGrafico2d3d(canvasGrafico, axes2dAcc, axes2dGyro, axes3dAcc, self.dataY, self.dataY, topLevel, (x, y, z))
-            # threadUpdategrafico2d3d.start()
-            # threadUpdategrafico2d3d.join()
+            thUpdateAxesAcc2d = ThAxesAcc2d(axes2dAcc, self.dataY, canvasGrafico)
+            thUpdateAxesGyro2d = ThAxesGyro2d(axes2dGyro, self.dataY, canvasGrafico)
+            thUpdateAxesAcc3d = ThAxesAcc3d(axes3dAcc, (x, y, z), canvasGrafico)
 
-            thUpdateAxesAcc2d = ThAxesAcc2d(axes2dAcc, self.dataY, grafico2d)
-            thUpdateAxesGyro2d = ThAxesGyro2d(axes2dGyro, self.dataY, grafico2d)
-            thUpdateAxesAcc3d = ThAxesAcc3d(axes3dAcc, (x, y, z), grafico2d)
-
-            thUpdateAxesAcc2d.start()
-            thUpdateAxesGyro2d.start()
+            # thUpdateAxesAcc2d.start()
+            # thUpdateAxesGyro2d.start()
             thUpdateAxesAcc3d.start()
 
             # thUpdateAxesAcc2d.join()
             # thUpdateAxesGyro2d.join()
-            # thUpdateAxesAcc3d.join()
+            thUpdateAxesAcc3d.join()
 
-            # prUpdateAxesAcc2d = PrAxesAcc2d(axes2dAcc, self.dataY)
-            # prUpdateAxesGyro2d = PrAxesGyro2d(axes2dGyro, self.dataY)
-            # prUpdateAxesGyro2d = PrAxesGyro2d(axes2dGyro, self.dataY)
-            # prUpdateAxesAcc3d = multiprocessing.Process(target=self.update3dpr, args=(axes3dAcc, (x, y, z), canvasGrafico))
-            #
-            # prUpdateAxesAcc2d.start()
-            # prUpdateAxesGyro2d.start()
-            # prUpdateAxesAcc3d.start()
-            #
-            # prUpdateAxesAcc2d.join()
-            # prUpdateAxesGyro2d.join()
-            # prUpdateAxesAcc3d.join()
-
-            grafico2d.draw()
+            canvasGrafico.draw()
             widgetTkGrafico2d.update()
 
             nowTime = time.time()

@@ -113,7 +113,7 @@ class Gui:
             if val:
                 self.play = val
                 self.updateGrafici(topLevel, fig, fig3d, grafico2d, grafico3d, widgetTkGrafico2d, widgetTkGrafico3d)
-                # self.aggiornaGrafici(topLevel, fig, fig3d, grafico2d, grafico3d)
+                # self.aggiornaGrafici(topLevel, fig, fig3d, canvasGrafico, grafico3d)
             else:
                 self.play = val
 
@@ -145,7 +145,7 @@ class Gui:
             self.dataY[1].append(y)
             self.dataY[2].append(z)
 
-            # threadUpdategrafico2d = threading.Thread(target=self.aggiornaGrafico2d, args=(axes2dAcc, axes2dGyro, grafico2d, self.dataX, self.dataY, self.dataX, self.dataY))
+            # threadUpdategrafico2d = threading.Thread(target=self.aggiornaGrafico2d, args=(axes2dAcc, axes2dGyro, canvasGrafico, self.dataX, self.dataY, self.dataX, self.dataY))
             # threadUpdategrafico3d = threading.Thread(target=self.aggiornaGrafico3d, args=(axes3dAcc, grafico3d, (x, y, z)))
 
             threadUpdategrafico2d = ThGrafico2d(grafico2d, axes2dAcc, axes2dGyro, self.dataX, self.dataY, self.dataX, self.dataY, topLevel)
@@ -167,7 +167,7 @@ class Gui:
 
             nowTime = time.time()
             print(round(nowTime - startTime, 3), "seconds")
-            # topLevel.after(1, self.updateGrafici(topLevel, figure2d, figure3d, grafico2d, grafico3d))
+            # topLevel.after(1, self.updateGrafici(topLevel, figure2d, figure3d, canvasGrafico, grafico3d))
 
     # vecchio metodo da 0.3 secondi di esecuzioni
     def aggiornaGrafici(self, topLevel, figure2d, figure3d, grafico2d, grafico3d):
@@ -224,7 +224,7 @@ class Gui:
     @staticmethod
     def aggiornaGrafico2d(grafico2d, axes2dAcc, axes2dGyro, accDataX, accDataY, gyroDataX, gyroDataY):
 
-            logging.info("Aggiornamento grafico 2d avviato")
+            logging.info("Aggiornamento canvasGrafico 2d avviato")
 
             axes2dAcc.clear()
             axes2dGyro.clear()
@@ -237,12 +237,12 @@ class Gui:
             axes2dGyro.plot(gyroDataX, gyroDataY[2])
 
             grafico2d.draw()
-            logging.info("Aggiornamento grafico 2d terminato")
+            logging.info("Aggiornamento canvasGrafico 2d terminato")
 
     @staticmethod
     def aggiornaGrafico3d(axes3dAcc, grafico3d, accValue):
 
-        logging.info("Aggiornamento grafico 3d avviato")
+        logging.info("Aggiornamento canvasGrafico 3d avviato")
 
         x = accValue[0]
         y = accValue[1]
@@ -260,7 +260,7 @@ class Gui:
         axes3dAcc.plot([0, 0], [0, 0], [0, z], color="green", marker="o", markevery=[-1])
         grafico3d.draw()
 
-        logging.info("Aggiornamento grafico 3d terminato")
+        logging.info("Aggiornamento canvasGrafico 3d terminato")
 
 
 if __name__ == '__main__':

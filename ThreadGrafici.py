@@ -18,7 +18,7 @@ class ThGrafico2d(threading.Thread):
         self.topLevel = topLevel
 
     def run(self):
-        print("grafico2d: ", type(self.grafico2d), self.grafico2d)
+        print("canvasGrafico: ", type(self.grafico2d), self.grafico2d)
 
         self.axes2dAcc.clear()
         self.axes2dGyro.clear()
@@ -32,7 +32,7 @@ class ThGrafico2d(threading.Thread):
         self.axes2dGyro.plot(self.gyroDataX, self.gyroDataY[1])
         self.axes2dGyro.plot(self.gyroDataX, self.gyroDataY[2])
 
-        # self.grafico2d.draw()
+        # self.canvasGrafico.draw()
         # self.topLevel.update()
 
 
@@ -77,7 +77,6 @@ class ThGrafico2d3d(threading.Thread):
         self.accValue = accValue
 
     def run(self):
-        print("grafico2d: ", type(self.grafico2d), self.grafico2d)
 
         x = self.accValue[0]
         y = self.accValue[1]
@@ -109,7 +108,7 @@ class ThGrafico2d3d(threading.Thread):
         self.axes2dGyro.plot(self.gyroDataX, self.gyroDataY[1])
         self.axes2dGyro.plot(self.gyroDataX, self.gyroDataY[2])
 
-        # self.grafico2d.draw()
+        # self.canvasGrafico.draw()
         # self.topLevel.update()
 
 
@@ -128,9 +127,6 @@ class ThAxesAcc2d(threading.Thread):
         self.axes.plot(self.dataX, self.dataY[0])
         self.axes.plot(self.dataX, self.dataY[1])
         self.axes.plot(self.dataX, self.dataY[2])
-        threadLock.acquire()
-        self.grafico.draw()
-        threadLock.release()
 
 
 class ThAxesGyro2d(threading.Thread):
@@ -148,9 +144,6 @@ class ThAxesGyro2d(threading.Thread):
         self.axes.plot(self.dataX, self.dataY[0])
         self.axes.plot(self.dataX, self.dataY[1])
         self.axes.plot(self.dataX, self.dataY[2])
-        threadLock.acquire()
-        self.grafico.draw()
-        threadLock.release()
 
 
 class ThAxesAcc3d(threading.Thread):
@@ -176,6 +169,6 @@ class ThAxesAcc3d(threading.Thread):
         self.axes.plot([0, x], [0, 0], [0, 0], color="red", marker="o", markevery=[-1])
         self.axes.plot([0, 0], [0, y], [0, 0], color="blue", marker="o", markevery=[-1])
         self.axes.plot([0, 0], [0, 0], [0, z], color="green", marker="o", markevery=[-1])
-        threadLock.acquire()
-        self.grafico.draw()
-        threadLock.release()
+        # threadLock.acquire()
+        # self.canvasGrafico.draw()
+        # threadLock.release()
