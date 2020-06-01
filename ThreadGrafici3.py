@@ -74,7 +74,7 @@ class ThAxesAcc3d(threading.Thread):
 
     def __init__(self, axes, canvasGrafico, widgetTkFigure, play):
         threading.Thread.__init__(self)
-        self.line = axes.get_lines()
+        self.line = axes.get_lines()[0]
         self.canvasGrafico = canvasGrafico
         self.widgetTkFigure = widgetTkFigure
         self.play = play
@@ -84,11 +84,18 @@ class ThAxesAcc3d(threading.Thread):
 
     def run(self):
         # pass
+        print(self.line)
+        # self.canvasGrafico.draw()
+        # self.widgetTkFigure.update()
+
         while self.play[0]:
             x = round(random.uniform(-1, 1), 1)
             y = round(random.uniform(-1, 1), 1)
             z = round(random.uniform(-1, 1), 1)
-            print(self.line)
+
+            self.line.set_xdata([0, x])
+            self.line.set_ydata([0, y])
+            self.line.set_3d_properties([0, z])
 
             # self.axes.clear()
             # self.axes.set_xticklabels([])

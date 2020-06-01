@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f04ea6d2-e75a-4f59-97d5-e1961f7a4767" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Main2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThreadGrafici2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThreadGrafici3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThreadGrafici4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main_old.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main_old.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main_old1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main_old1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThreadGrafici.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreadGrafici.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThreadGrafici3.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreadGrafici3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,8 +61,8 @@
       <recent name="C:\Users\maadd\Documents\GitHub\testgui" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Main2">
-    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.multiprocess_sgskip (1)">
+    <configuration name="Main4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="testgui" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -77,7 +75,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main4.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -86,7 +84,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Main2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="multiprocess_sgskip (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="testgui" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -94,56 +92,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="testgui" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="scratch_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="testgui" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/multiprocess_sgskip (1).py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -174,13 +128,57 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="scratch_3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="testgui" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch_4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="testgui" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Main2" />
+        <item itemvalue="Python.multiprocess_sgskip (1)" />
+        <item itemvalue="Python.Main4" />
+        <item itemvalue="Python.scratch_4" />
+        <item itemvalue="Python.scratch_3" />
         <item itemvalue="Python.scratch_2" />
-        <item itemvalue="Python.scratch_1" />
-        <item itemvalue="Python.scratch" />
-        <item itemvalue="Python.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +212,9 @@
       <workItem from="1584945268418" duration="13864000" />
       <workItem from="1584990429628" duration="1380000" />
       <workItem from="1585661980797" duration="20377000" />
-      <workItem from="1586002629796" duration="7102000" />
+      <workItem from="1586002629796" duration="14145000" />
+      <workItem from="1586067700236" duration="13599000" />
+      <workItem from="1586374276156" duration="697000" />
     </task>
     <servers />
   </component>
@@ -230,54 +230,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" width="1092" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586002727584" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1586018514988">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1586105350059">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586018514988" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1586018514988">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586105350059" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1586105350058">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586018514988" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1586018514988">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586105350058" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1586105350058">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586018514988" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1586018514988">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586105350058" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1586105350058">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586018514988" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1586017892587">
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586105350058" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1586105350059">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586017892587" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1586017892587">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586105350059" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1586105350059">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586017892587" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1586017892586">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586105350059" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1586105350059">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586017892586" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1586017892587">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586105350059" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1586105350059">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586017892587" />
-    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1586017892587">
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586105350059" />
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1586105350059">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586017892587" />
-    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1586017892587">
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586105350059" />
+    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1586105350059">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.center/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586017892587" />
-    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1586017892587">
+    <state width="1877" height="348" key="GridCell.Tab.2.center/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586105350059" />
+    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1586105350059">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.left/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586017892587" />
-    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1586017892587">
+    <state width="1877" height="348" key="GridCell.Tab.2.left/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586105350059" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1586105350059">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586017892587" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586105350059" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1586005720990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -294,10 +294,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="521" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586005818221" />
-    <state x="830" y="414" key="publish.login" timestamp="1584662020280">
+    <state x="830" y="414" key="publish.login" timestamp="1586068293050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="830" y="414" key="publish.login/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1584662020280" />
+    <state x="830" y="414" key="publish.login/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1586068293050" />
     <state x="701" y="163" key="refactoring.ChangeSignatureDialog" timestamp="1585677571834">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -307,25 +307,17 @@
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1080.-433.1080.1880@0.0.1920.1040" timestamp="1584840266889" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/ThreadGrafici2.py</url>
-          <line>102</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/testgui$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1585695740851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/testgui$Main2.coverage" NAME="Main2 Coverage Results" MODIFIED="1586018307539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/testgui$scratch_4.coverage" NAME="scratch_4 Coverage Results" MODIFIED="1584531423177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
-    <SUITE FILE_PATH="coverage/testgui$scratch_2.coverage" NAME="scratch_2 Coverage Results" MODIFIED="1586018243945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/testgui$scratch_4.coverage" NAME="scratch_4 Coverage Results" MODIFIED="1586078899044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/testgui$scratch_2.coverage" NAME="scratch_2 Coverage Results" MODIFIED="1586070368464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/testgui$Main4.coverage" NAME="Main4 Coverage Results" MODIFIED="1586083507970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/testgui$multiprocess_sgskip__1_.coverage" NAME="multiprocess_sgskip (1) Coverage Results" MODIFIED="1586083514289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/testgui$threading_example.coverage" NAME="threading_example Coverage Results" MODIFIED="1584990437834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
-    <SUITE FILE_PATH="coverage/testgui$scratch_3.coverage" NAME="scratch_3 Coverage Results" MODIFIED="1584520306847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/testgui$Main3.coverage" NAME="Main3 Coverage Results" MODIFIED="1586033068554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/testgui$scratch_1.coverage" NAME="scratch_1 Coverage Results" MODIFIED="1585696690348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
-    <SUITE FILE_PATH="coverage/testgui$Main.coverage" NAME="Main Coverage Results" MODIFIED="1585677249219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/testgui$scratch_3.coverage" NAME="scratch_3 Coverage Results" MODIFIED="1586074490089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/testgui$Main.coverage" NAME="Main Coverage Results" MODIFIED="1586032931829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

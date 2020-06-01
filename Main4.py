@@ -1,3 +1,4 @@
+import multiprocessing
 import threading
 import time
 
@@ -111,22 +112,31 @@ class Gui:
         def setPlay(val):
             if val:
                 self.play = val
-                self.updateFigure(topLevel, (accAxes, gyroAxes, accAxes3d), canvasGrafico, widgetTkFigure,)
+                # self.updateFigure(topLevel, (accAxes, gyroAxes, accAxes3d), canvasGrafico, widgetTkFigure,)
                 # self.updateFigure(topLevel, fig, canvasGrafico, widgetTkFigure,)
                 # thUpdateAxesAcc3d = ThAxesAcc3d(accAxes3d, canvasGrafico, widgetTkFigure, [self.play])
                 # thUpdateAxesGyro2d = ThAxesGyro2d(accAxes3d, canvasGrafico, widgetTkFigure)
                 # thUpdateAxesAcc2d = ThAxesAcc2d(accAxes3d, canvasGrafico, widgetTkFigure)
-                # thUpdateAxesAcc3d.start()
-                # thUpdateAxesGyro2d.start()
+                thUpdateAxesAcc3d = multiprocessing.Process(target=self.updateAcc3d, args=(accAxes3d, canvasGrafico, widgetTkFigure))
+                # thUpdateAxesAcc2d = multiprocessing.Process(target=self.updateAcc2d, args=(accAxes, canvasGrafico, widgetTkFigure))
+                thUpdateAxesAcc3d.start()
+                thUpdateAxesAcc3d.join()
                 # thUpdateAxesAcc2d.start()
-                # thUpdateAxesAcc3d.join()
-                # canvasGrafico.draw()
-                # widgetTkFigure.update()
+                topLevel.after(0, self.updateFrame(topLevel, canvasGrafico, widgetTkFigure))
+                # thUpdateAxesGyro2d.start()
                 # thUpdateAxesGyro2d.join()
                 # thUpdateAxesAcc2d.join()
+                # canvasGrafico.draw()
+                # widgetTkFigure.update()
 
             else:
                 self.play = val
+
+    def updateFrame(self, toplevel, canvasGrafico, widgetTkFigure):
+        if self.play:
+            canvasGrafico.draw()
+            widgetTkFigure.update()
+            toplevel.after(0, self.updateFrame(toplevel, canvasGrafico, widgetTkFigure))
 
     def updateFigure(self, topLevel, axes, canvasGrafico, widgetTkGrafico2d):
         axes2dAcc = axes[0]
@@ -176,6 +186,55 @@ class Gui:
 
             nowTime = time.time()
             print(round(nowTime - startTime, 3), "seconds")
+
+    def updateAcc3d(self, axes, canvasGrafico, widgetTkFigure):
+        linex = axes.get_lines()[0]
+        liney = axes.get_lines()[1]
+        linez = axes.get_lines()[2]
+
+        while self.play:
+            x = round(random.uniform(-1, 1), 1)
+            y = round(random.uniform(-1, 1), 1)
+            z = round(random.uniform(-1, 1), 1)
+
+            linex.set_xdata([0, x])
+            linex.set_ydata([0, 0])
+            linex.set_3d_properties([0, 0])
+
+            liney.set_xdata([0, 0])
+            liney.set_ydata([0, y])
+            liney.set_3d_properties([0, 0])
+
+            linez.set_xdata([0, 0])
+            linez.set_ydata([0, 0])
+            linez.set_3d_properties([0, z])
+
+    def updateAcc2d(self, axes, canvasGrafico, widgetTkFigure):
+        linex = axes.get_lines()[0]
+        liney = axes.get_lines()[1]
+        linez = axes.get_lines()[2]
+        dataX = list(reversed([i for i in range(50)]))
+        dataY = [[0] * 50, [0] * 50, [0] * 50]
+
+        while self.play:
+            x = round(random.uniform(-1, 1), 1)
+            y = round(random.uniform(-1, 1), 1)
+            z = round(random.uniform(-1, 1), 1)
+
+            del dataY[0][0]
+            del dataY[1][0]
+            del dataY[2][0]
+
+            dataY[0].append(x)
+            dataY[1].append(y)
+            dataY[2].append(z)
+
+            linex.set_xdata(dataX)
+            linex.set_ydata(dataY[0])
+            liney.set_xdata(dataX)
+            liney.set_ydata(dataY[1])
+            linez.set_xdata(dataX)
+            linez.set_ydata(dataY[2])
 
 
 if __name__ == '__main__':

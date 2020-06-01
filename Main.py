@@ -150,9 +150,9 @@ class Gui:
             thUpdateAxesGyro2d.start()
             thUpdateAxesAcc3d.start()
 
-            # thUpdateAxesAcc2d.join()
-            # thUpdateAxesGyro2d.join()
-            # thUpdateAxesAcc3d.join()
+            thUpdateAxesAcc2d.join()
+            thUpdateAxesGyro2d.join()
+            thUpdateAxesAcc3d.join()
 
             # prUpdateAxesAcc2d = PrAxesAcc2d(axes2dAcc, self.dataY)
             # prUpdateAxesGyro2d = PrAxesGyro2d(axes2dGyro, self.dataY)
